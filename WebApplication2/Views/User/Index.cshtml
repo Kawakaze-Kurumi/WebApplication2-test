@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/user.css">
+</head>
+<body>
+    <header class="header">
+        <img src="~/Content/Images/logo.jpg" alt="Logo" class="logo" onclick="location.reload()">
+        <h1>PND Logistics</h1>
+    </header>
+    <div class="dashboard">
+        <div class="menu-grid">
+            <div class="menu-item" onclick="window.location.href='@Url.Action("GoToJob", "User")'">
+                <span>🚀</span> JOB
+            </div>
+            <div class="menu-item"><span>👥</span> CUSTOMER</div>
+            <div class="menu-item"><span>🤝</span> AGENT</div>
+            <div class="menu-item"><span>🚢</span> CARRIER</div>
+            <div class="menu-item"><span>📦</span> SUPPLIER</div>
+            <div class="menu-item"><span>📦</span> SHIPPER</div>
+            <div class="menu-item"><span>📦</span> CNEE</div>
+            <div class="menu-item"><span>💰</span> PAYMENT</div>
+            <div class="menu-item"><span>💰</span> PAYMENT 2</div>
+            <div class="menu-item"><span>🔢</span> HS CODE</div>
+            <div class="menu-item"><span>📄</span> QUOTATION</div>
+            <div class="menu-item"><span>📊</span> REPORT</div>
+            <div class="menu-item"><span>💬</span> CHAT</div>
+            <div class="menu-item"><span>👨‍💼</span> HUMAN RESOURCE</div>
+            <div class="menu-item"><span>👤</span> ACCOUNT</div>
+            <div class="menu-item"><span>⚙️</span> SETTING</div>
+        </div>
+    </div>
+</body>
+</html>
