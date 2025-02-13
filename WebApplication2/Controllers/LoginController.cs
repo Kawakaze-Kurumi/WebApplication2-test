@@ -14,7 +14,7 @@ namespace WebApplication2.Controllers
             _logger = logger;   
         }
 
-        Test1Context db = new Test1Context();
+        Test1Context db= new Test1Context();
 
         [HttpGet]
         public IActionResult Index()

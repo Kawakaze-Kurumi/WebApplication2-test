@@ -6,79 +6,151 @@
     <title>User Dashboard</title>
     <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/job.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="~/js/job.js"></script>
 </head>
 <body>
     <header class="header">
-        <textarea></textarea>
+        <input type="text" id="search" class="form-control">
         <button class="button">🔍 SEARCH</button>
         <button class="button cancel">❌ CANCEL</button>
         <button class="button">🔄 REFRESH</button>
         <a href="@Url.Action("GoToHome", "Job")" class="button home">🏠</a>
     </header>
-
+    <br />
     <content>
-        <div class="button-container">
-            <button onclick="showFields('hbl')">HBL</button>
-            <button onclick="showFields('mbl')">MBL</button>
-        </div>
+        
 
+        <div class="container-fluid">
 
-        <div id="hbl-fields" class="job-fields">
-            <fieldset class="border p-3">
-                <legend class="w-auto">HBL Form</legend>
-                <div class="row g-3">
-                    <div class="col-md-2">
-                        <label for="job_id" class="form-label">JOB ID*</label>
-                        <input type="text" id="job_id" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="job_date" class="form-label">JOB DATE</label>
-                        <input type="date" id="job_date" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="vessel_name" class="form-label">VESSEL/VOL NAME</label>
-                        <input type="text" id="vessel_name" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="mode" class="form-label">MODE</label>
-                        <select id="mode" class="form-select">
-                            <option>Sea</option>
-                            <option>Air</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label for="job_lock_day" class="form-label">JOB LOCK DAY</label>
-                        <input type="date" id="job_lock_day" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="goods_type" class="form-label">GOODS TYPE</label>
-                        <input type="text" id="goods_type" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="mbl" class="form-label">MBL</label>
-                        <input type="text" id="mbl" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="etd" class="form-label">ETD*</label>
-                        <input type="date" id="etd" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="eta" class="form-label">ETA*</label>
-                        <input type="date" id="eta" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="unlock" class="form-label">UNLOCK</label>
-                        <input type="text" id="unlock" class="form-control">
-                    </div>
+            <div class="col-sm-1" style="border: 1px solid black; height: 700px; overflow-y: auto;">
+                <label for="category">Chọn nhóm</label>
+                <select id="category" class="form-select">
+                    <option value="">-- Chọn nhóm --</option>
+                    <option value="AI">AI</option>
+                    <option value="AE">AE</option>
+                    <option value="FCLI">FCLI</option>
+                </select>
+
+                <h4 class="mt-3">Danh sách mã:</h4>
+                <ul id="codeList" class="list-group">
+                    <li class="list-group-item">Chưa có dữ liệu</li>
+                </ul>
+                
+            </div>
+
+            <div  class="col-sm-11" style="border: 1px solid black; height: 700px; overflow-y: auto;">
+                <div class="button-container">
+                    <button onclick="showFields('hbl')">HBL</button>
+                    <button onclick="showFields('mbl')">MBL</button>
                 </div>
-            </fieldset>
-        </div>
+                <div id="hbl-fields">
+                    <fieldset class="border p-3">
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-2">
+                                <label for="job_id" class="">JOB ID*</label>
+                                <input type="text" id="job_id" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="job_date" class="">JOB DATE</label>
+                                <input type="date" id="job_date" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="vessel_name" class="">VESSEL/VOL NAME</label>
+                                <input type="text" id="vessel_name" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="mode" class="">MODE</label>
+                                <input type="text" id="mode" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="job_lock_day" class="">JOB LOCK DAY</label>
+                                <input type="date" id="job_lock_day" class="form-control">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-2">
+                                <label for="goods_type" class="">GOODS TYPE</label>
+                                <input type="text" id="goods_type" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="mbl" class="">MBL</label>
+                                <input type="text" id="mbl" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="etd" class="">ETD*</label>
+                                <input type="date" id="etd" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="eta" class="">ETA*</label>
+                                <input type="date" id="eta" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="unlock" class="">UNLOCK</label>
+                                <input type="text" id="unlock" class="form-control">
+                            </div>
+                        </div>
+                    
+                    </fieldset>
 
-        <div id="mbl-fields" class="job-fields">
-            <textarea>Job Id 2</textarea>
-            <textarea>Job Date 2</textarea>
-            <textarea>Good Type 2</textarea>
+                </div>
+
+                <div id="mbl-fields">
+                    <fieldset class="border p-3">
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-2">
+                                <label for="job_id" class="">JOB ID 2*</label>
+                                <input type="text" id="job_id" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="job_date" class="">JOB DATE</label>
+                                <input type="date" id="job_date" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="vessel_name" class="">VESSEL/VOL NAME</label>
+                                <input type="text" id="vessel_name" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="mode" class="">MODE</label>
+                                <input type="text" id="mode" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="job_lock_day" class="">JOB LOCK DAY</label>
+                                <input type="date" id="job_lock_day" class="form-control">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-2">
+                                <label for="goods_type" class="">GOODS TYPE</label>
+                                <input type="text" id="goods_type" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="mbl" class="">MBL</label>
+                                <input type="text" id="mbl" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="etd" class="">ETD*</label>
+                                <input type="date" id="etd" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="eta" class="">ETA*</label>
+                                <input type="date" id="eta" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="unlock" class="">UNLOCK</label>
+                                <input type="text" id="unlock" class="form-control">
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+
         </div>
     </content>
 

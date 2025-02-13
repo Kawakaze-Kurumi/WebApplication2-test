@@ -1,0 +1,5 @@
+
+Scaffold-DbContext "Chuỗi kết nối sau khi hết nối visual studio với sql" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+
+VD : "Data Source=DESKTOP-S24TC32\SQLEXPRESS;Initial Catalog=test1;Integrated Security=True;Trust Server Certificate=True" 
