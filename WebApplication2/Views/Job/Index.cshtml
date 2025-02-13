@@ -11,7 +11,9 @@
 </head>
 <body>
     <header class="header">
-        <input type="text" id="search" class="form-control">
+        <div class="col-xs-2">
+            <input class="form-control" id="search" type="text">
+        </div>
         <button class="button">🔍 SEARCH</button>
         <button class="button cancel">❌ CANCEL</button>
         <button class="button">🔄 REFRESH</button>
@@ -23,7 +25,7 @@
 
         <div class="container-fluid">
 
-            <div class="col-sm-1" style="border: 1px solid black; height: 700px; overflow-y: auto;">
+            <div class="col-sm-1" style="border: 1px solid black; height: 780px; overflow-y: auto;">
                 <label for="category">Chọn nhóm</label>
                 <select id="category" class="form-select">
                     <option value="">-- Chọn nhóm --</option>
@@ -69,6 +71,7 @@
                                 <input type="date" id="job_lock_day" class="form-control">
                             </div>
                         </div>
+
                         <br />
                         <div class="row g-2 mb-4">
                             <div class="col-sm-2">
@@ -92,7 +95,70 @@
                                 <input type="text" id="unlock" class="form-control">
                             </div>
                         </div>
-                    
+
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-2">
+                                <label for="issue_date" class="">ISSUE DATE</label>
+                                <input type="text" id="issue_date" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="on_board_date" class="">ON BOARD DATE</label>
+                                <input type="text" id="on_board_date" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="etd" class="">AGENT*</label>
+                                <input type="text" id="agent" class="form-control">
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-4">
+                                <label for="port_of_load" class="">PORT OF LOAD</label>
+                                <input type="text" id="port_of_load" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="carrier" class="">CARRIER*</label>
+                                <input type="text" id="carrier" class="form-control">
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row g-2">
+                            <div class="col-sm-4">
+                                <div class="row-sm-2">
+                                    <label for="port_of_destination" class="">PORT OF DESTINATION</label>
+                                    <input type="text" id="port_of_destination" class="form-control">
+                                </div>
+                                <br />
+                                <div class="row-sm-2">
+                                    <label for="port_of_delivery" class="">PORT OF DELIVERY</label>
+                                    <input type="text" id="port_of_delivery" class="form-control">
+                                </div>
+                                <br />
+                                <div class="row-sm-2">
+                                    <label for="place_of_delivery" class="">PLACE OF DELIVERY</label>
+                                    <input type="text" id="place_of_delivery" class="form-control">
+                                </div>
+                                <br />
+                                <div class="row-sm-2">
+                                    <label for="place_of_receipt" class="">PLACE OF RECEIPT</label>
+                                    <input type="text" id="place_of_receipt" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="row-sm-2">
+                                    <label for="your_company" class="">YOUR COMPANY</label>
+                                    <input type="text" id="your_company" class="form-control" style="height: 113px;">
+                                </div>
+                                <br />
+                                <div class="row-sm-2">
+                                    <label for="link" class="">LINK</label>
+                                    <input type="text" id="link" class="form-control" style="height: 113px;">
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
 
                 </div>
@@ -151,7 +217,30 @@
                 </div>
             </div>
 
+            <div class="row-sm-1" style="border: 1px solid black; height: 80px; overflow-y: auto;">
+
+            </div>
+
+
+            <div class="row-sm-1" style="border: 1px solid black; height: 80px; overflow-y: auto;">
+                <br />
+                <div class="col-sm-1 justify-content-end">
+                    <label for="from_time" class="">FROM TIME</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" id="from_time" class="form-control">
+                </div>
+
+                <div class="col-sm-1">
+                    <label for="to_time" class="">TO TIME</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" id="to_time" class="form-control">
+                </div>
+            </div>
         </div>
+
+        
     </content>
 
     <footer>
