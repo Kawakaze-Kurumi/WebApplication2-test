@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="~/css/job.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="~/js/job.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="col-xs-2">
+            <input class="form-control" id="search" type="text">
+        </div>
+        <button class="button">🔍 SEARCH</button>
+        <button class="button cancel">❌ CANCEL</button>
+        <button class="button">🔄 REFRESH</button>
+        <a href="@Url.Action("GoToHome", "Job")" class="button home">🏠</a>
+    </header>
+    <br />
+
+    <content>
+        <div class="container-fluid">
+
+        </div>
+    </content>
+</body>
+</html>

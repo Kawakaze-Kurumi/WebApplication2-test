@@ -15,19 +15,17 @@
     </header>
     <div class="dashboard">
         <div class="menu-grid">
-            <div class="menu-item" onclick="window.location.href='@Url.Action("GoToJob", "User")'">
-                <span>🚀</span> JOB
-            </div>
+            <div class="menu-item"><a asp-controller="User" asp-action="GoToJob" style="text-decoration: none;"><span>🚀</span> JOB </a></div>
             <div class="menu-item"><span>👥</span> CUSTOMER</div>
             <div class="menu-item"><span>🤝</span> AGENT</div>
-            <div class="menu-item"><a asp-controller="Carriers" asp-action="Index"><span>🚢</span> CARRIER </a></div>
+            <div class="menu-item"><a asp-controller="Carriers" asp-action="Index" style="text-decoration: none;"><span>🚢</span> CARRIER </a></div>
             <div class="menu-item"><span>📦</span> SUPPLIER</div>
             <div class="menu-item"><span>📦</span> SHIPPER</div>
             <div class="menu-item"><span>📦</span> CNEE</div>
             <div class="menu-item"><span>💰</span> PAYMENT</div>
             <div class="menu-item"><span>💰</span> PAYMENT 2</div>
             <div class="menu-item"><span>🔢</span> HS CODE</div>
-            <div class="menu-item"><span>📄</span> QUOTATION</div>
+            <div class="menu-item"><a asp-controller="Quotation" asp-action="Index" style="text-decoration: none;"><span>📄</span> QUOTATION </a></div>
             <div class="menu-item"><span>📊</span> REPORT</div>
             <div class="menu-item"><span>💬</span> CHAT</div>
             <div class="menu-item"><span>👨‍💼</span> HUMAN RESOURCE</div>
