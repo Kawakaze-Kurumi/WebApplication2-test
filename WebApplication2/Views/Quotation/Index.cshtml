@@ -10,20 +10,133 @@
 </head>
 <body>
     <header class="header">
-        <div class="col-xs-2">
-            <input class="form-control" id="search" type="text">
-        </div>
-        <button class="button">🔍 SEARCH</button>
-        <button class="button cancel">❌ CANCEL</button>
-        <button class="button">🔄 REFRESH</button>
+        <h1>BÁO GIÁ HÀNG HÓA DỊCH VỤ</h1>
         <a href="@Url.Action("GoToHome", "Job")" class="button home">🏠</a>
     </header>
     <br />
 
     <content>
         <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label for="from" class="">FROM</label>
+                    <input type="text" id="from" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label for="to" class="">To</label>
+                    <input type="text" id="to" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label for="contact" class="">CONTACT</label>
+                    <input type="text" id="contact" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label for="contact" class="">CONTACT</label>
+                    <input type="text" id="contact" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label for="quotation_no" class="">QUOTATION NO</label>
+                    <input type="text" id="quotation_no" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label for="status" class="">STATUS</label>
+                    <input type="text" id="status" class="form-control">
+                </div>
+            </div>
 
+            <br />
+            <div class="row">
+                <div class="col-sm-2">
+                    <label for="date" class="">DATE</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label for="valid" class="">VALID</label>
+                    <input type="text" id="valid" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <br />
+
+            <h1>BẢNG BÁO GIÁ THEO YÊU CẦU CỦA KHÁCH HÀNG</h1>
+
+            <br />
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="add" class="">ĐỊA ĐIỂM NHẬN HÀNG (ADD) </label>
+                    <input type="text" id="add" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="pol" class="">CẢNG NHẬN HÀNG (POL) </label>
+                    <input type="text" id="pol" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="pod" class="">CẢNG XUẤT HÀNG (POD) </label>
+                    <input type="text" id="pod" class="form-control">
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="commodity" class="">COMMODITY</label>
+                    <input type="text" id="commodity" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="vol" class="">VOL</label>
+                    <input type="text" id="vol" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="term" class="">TERM</label>
+                    <input type="text" id="term" class="form-control">
+                </div>
+            </div>
+
+
+            <br />
+            <div class="row">
+
+            </div>
+
+
+            <div class="row">
+                <table class="table table-sm" style="border : 1px solid black">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>NAME FEE</th>
+                            <th>UNIT</th>
+                            <th>QUANTITY</th>
+                            <th>PRICE</th>
+                            <th>CURRENCY</th>
+                            <th>TOTAL</th>
+                            <th>NOTES</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+        
     </content>
 </body>
 </html>
