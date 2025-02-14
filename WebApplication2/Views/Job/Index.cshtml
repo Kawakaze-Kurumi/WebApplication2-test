@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>User Dashboard</title>
-    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/job.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="~/js/job.js"></script>
@@ -25,7 +24,7 @@
 
         <div class="container-fluid">
 
-            <div class="col-sm-1" style="border: 1px solid black; height: 780px; overflow-y: auto;">
+            <div class="col-sm-2" style="border: 1px solid black; height: 780px; overflow-y: auto;">
                 <label for="category">Chọn nhóm</label>
                 <select id="category" class="form-select">
                     <option value="">-- Chọn nhóm --</option>
@@ -41,12 +40,12 @@
                 
             </div>
 
-            <div  class="col-sm-11" style="border: 1px solid black; height: 700px; overflow-y: auto;">
+            <div  class="col-sm-10" style="border: 1px solid black; height: 700px; overflow-y: auto;">
                 <div class="button-container">
-                    <button onclick="showFields('hbl')">HBL</button>
                     <button onclick="showFields('mbl')">MBL</button>
+                    <button onclick="showFields('hbl')">HBL</button>
                 </div>
-                <div id="hbl-fields">
+                <div id="mbl-fields">
                     <fieldset class="border p-3">
                         <br />
                         <div class="row g-2 mb-4">
@@ -163,52 +162,145 @@
 
                 </div>
 
-                <div id="mbl-fields">
+                <div id="hbl-fields">
                     <fieldset class="border p-3">
                         <br />
                         <div class="row g-2 mb-4">
                             <div class="col-sm-2">
-                                <label for="job_id" class="">JOB ID 2*</label>
-                                <input type="text" id="job_id" class="form-control">
+                                <label for="hbl" class="">HBL*</label>
+                                <input type="text" id="hbl" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="job_date" class="">JOB DATE</label>
-                                <input type="date" id="job_date" class="form-control">
+                                <label for="issue_date" class="">ISSUE DATE</label>
+                                <input type="date" id="issue_date" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="vessel_name" class="">VESSEL/VOL NAME</label>
-                                <input type="text" id="vessel_name" class="form-control">
+                                <label for="on_board_date" class="">ON BOARD DATE</label>
+                                <input type="text" id="on_board_date" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="mode" class="">MODE</label>
-                                <input type="text" id="mode" class="form-control">
+                                <label for="b_l_type" class="">B/L TYPE</label>
+                                <input type="text" id="b_l_type" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="job_lock_day" class="">JOB LOCK DAY</label>
-                                <input type="date" id="job_lock_day" class="form-control">
+                                <label for="norm_freehand" class="">NORM FREEHAND*</label>
+                                <input type="date" id="norm_freehand" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="staff" class="">STAFF*</label>
+                                <input type="text" id="staff" class="form-control">
                             </div>
                         </div>
+
                         <br />
                         <div class="row g-2 mb-4">
                             <div class="col-sm-2">
-                                <label for="goods_type" class="">GOODS TYPE</label>
-                                <input type="text" id="goods_type" class="form-control">
+                                <label for="preight_charge" class="">FREIGHT CHARGE</label>
+                                <input type="checkbox" id="preight_charge" class="form-check-input">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="prepaid" class="">FREPAID</label>
+                                <input type="checkbox" id="prepaid" class="form-check-input">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="collect" class="">COLLECT</label>
+                                <input type="checkbox" id="collect" class="form-check-input">
                             </div>
                             <div class="col-sm-2">
-                                <label for="mbl" class="">MBL</label>
-                                <input type="text" id="mbl" class="form-control">
+                                <label for="pricing" class="">PRICING </label>
+                                <input type="text" id="pricing" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="etd" class="">ETD*</label>
-                                <input type="date" id="etd" class="form-control">
+                                <label for="doc_lgt" class="">DOC_LGT</label>
+                                <input type="text" id="doc_lgt" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="eta" class="">ETA*</label>
-                                <input type="date" id="eta" class="form-control">
+                                <label for="lgt_to_khai" class="">LGT TỜ KHAI</label>
+                                <input type="text" id="lgt_to_khai" class="form-control">
                             </div>
                             <div class="col-sm-2">
-                                <label for="unlock" class="">UNLOCK</label>
-                                <input type="text" id="unlock" class="form-control">
+                                <label for="lgt_kiem_hoa" class="">LGT KIỂM HÓA</label>
+                                <input type="text" id="lgt_kiem_hoa" class="form-control">
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-4">
+                                <label for="shipper" class="">SHIPPER*</label>
+                                <input type="text" id="shipper" class="form-control" style="height: 100px">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="cont_seal_no" class="">CONT/SEAL NO</label>
+                                <input type="text" id="cont_seal_no" class="form-control" style="height: 100px">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="mark_nos" class="">MARK NOS</label>
+                                <input type="text" id="mark_nos" class="form-control" style="height: 100px">
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-4">
+                                <label for="cnee" class="">CNEE*</label>
+                                <input type="text" id="cnee" class="form-control" style="height: 100px">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="goods_desciption" class="">GOODS DESCRIPTION</label>
+                                <input type="text" id="goods_desciption" class="form-control" style="height: 100px">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="issue_place" class="">ISSUE PLACE</label>
+                                <input type="text" id="issue_place" class="form-control" style="height: 100px">
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-3">
+                                <label for="notify_party" class="">NOTIFY PARTY</label>
+                                <input type="text" id="notify_party" class="form-control" >
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="volume" class="">VOLUME</label>
+                                <input type="text" id="volume" class="form-control" >
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="quantity" class="">QUANTITY</label>
+                                <input type="text" id="quantity" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="gross_weigh" class="">GROSS WEIGH (KG)</label>
+                                <input type="text" id="gross_weigh" class="form-control" >
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="pic" class="">PIC</label>
+                                <input type="text" id="pic" class="form-control">
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-3">
+                                <label for="customer" class="">CUSTOMER</label>
+                                <input type="text" id="customer" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="tonnage" class="">TONNAGE (CBM)</label>
+                                <input type="text" id="tonnage" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="number_of_origins" class="">NUMBER OF ORIGINS</label>
+                                <input type="text" id="number_of_origins" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="inquiry_no" class="">INQUIRY NO</label>
+                                <input type="text" id="inquiry_no" class="form-control">
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="si_no" class="">SI NO</label>
+                                <input type="text" id="si_no" class="form-control">
                             </div>
                         </div>
 
@@ -230,7 +322,9 @@
                 <div class="col-sm-2">
                     <input type="text" id="from_time" class="form-control">
                 </div>
+                <div class="col-sm-2">
 
+                </div>
                 <div class="col-sm-1">
                     <label for="to_time" class="">TO TIME</label>
                 </div>
@@ -238,6 +332,8 @@
                     <input type="text" id="to_time" class="form-control">
                 </div>
             </div>
+
+
         </div>
 
         

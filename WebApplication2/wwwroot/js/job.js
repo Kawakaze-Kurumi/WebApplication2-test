@@ -5,5 +5,5 @@
 
 // Hiển thị mặc định HBL khi tải trang
 document.addEventListener("DOMContentLoaded", function () {
-    showFields('hbl');
+    showFields('mbl');
 });
