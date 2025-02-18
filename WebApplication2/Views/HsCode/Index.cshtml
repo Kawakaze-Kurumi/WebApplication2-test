@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="col-xs-2">
+            <input class="form-control" id="search" type="text">
+        </div>
+        <button class="button">🔍 SEARCH</button>
+        <button class="button cancel">❌ CANCEL</button>
+        <button class="button">🔄 REFRESH</button>
+        <a href="@Url.Action("GoToHome", "Job")" class="button home">🏠</a>
+    </header>
+
+    <br />
+    <content>
+        <div class="container-fluid">
+            <fieldset class="border p-3">
+                <div class="row g-2 mb-4">
+                    <div class="col-sm-2">
+                        <label for="hscode" class="">HS Code</label>
+                        <input type="text" id="hscode" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="donvi" class="">Đơn Vị</label>
+                        <input type="date" id="donvi" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="nkud" class="">NK UD %</label>
+                        <input type="text" id="nkud" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="nktt" class="">NK TT %</label>
+                        <input type="text" id="nktt" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="vat" class="">VAT %</label>
+                        <input type="date" id="vat" class="form-control">
+                    </div>
+                </div>
+        
+                <br />
+                <div class="row g-2 mb-4">
+                    <div class="col-sm-6">
+                        <label for="motahanghoaviet" class="">MÔ TẢ HÀNG HÓA ( VIỆT )</label>
+                        <input type="text" id="motahanghoaviet" class="form-control" style="height: 100px">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="motahanghoaanh" class="">MÔ TẢ HÀNG HÓA ( ENG )</label>
+                        <input type="text" id="motahanghoaanh" class="form-control" style="height: 100px">
+                    </div>
+                </div>
+
+                <br />
+                <div class="row g-2 mb-4">
+                    <div class="col-sm-10">
+                        <label for="ghichu" class="">GHI CHÚ</label>
+                        <input type="text" id="ghichu" class="form-control" style="height: 100px">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="ngaycapnhat" class="">NGÀY CẬP NHẬT</label>
+                        <input type="text" id="ngaycapnhat" class="form-control" style="height: 100px">
+                    </div>
+                </div>
+
+                <br />
+                <div class="row g-2 mb-4">
+                    <div class="col-sm-10">
+                        <label for="themghichu" class="">THÊM GHI CHÚ</label>
+                        <input type="text" id="themghichu" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="button" id="themghichu" value="THÊM GHI CHÚ"/>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </content>
+</body>
+</html>

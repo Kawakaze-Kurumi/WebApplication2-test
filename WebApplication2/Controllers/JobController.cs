@@ -13,5 +13,10 @@ namespace WebApplication2.Controllers
         {
             return RedirectToAction("Index", "User");
         }
+
+        public ActionResult GoToHBL()
+        {
+            return RedirectToAction("Index", "HBL");
+        }
     }
 }
